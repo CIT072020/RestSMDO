@@ -1,0 +1,32 @@
+{
+    "docAppleDate": "27.08.2021",
+    "viewCode": 10,
+    "sysOrgan": 24,
+    "organDocCode": 17601036,
+    "sysDocTypeCode": 8,
+    "name": "ВАСИСУАЛИЙ",
+    "surname": "ЛОХАНКИН",
+    "birthday": "19400909",
+    "sexCode": 21000001,
+    "identif": "7781198A001PB8",
+    "citizenCode": 11200001,
+    "docTypeCode": 54100015,
+    "docSery": "MC",
+    "docNum": "0922732",
+    "docDateIssue": "10.08.2021",
+    "docIssueOrganCode": 17608931,
+    "inputOldAddress": true,
+    "areaLCode": 11300006,
+    "regionLCode": null,
+    "typeCityLCode":11100001,
+    "cityLCode":11906424,
+    "intracityRegionCode":8,
+    "streetLCode":11400412,
+    "typeStreetLCode":11700003,
+    "house": "23",
+    "addressLiveBaseDTO": null,
+    "form19_20DTO": {
+        "dateReg": "31.08.2021",
+        "regTypeCode": 2
+    }
+}
