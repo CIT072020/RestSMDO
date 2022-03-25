@@ -151,12 +151,13 @@ object Form1: TForm1
     TitleFont.Style = []
   end
   object btnGetDocs: TButton
-    Left = 304
-    Top = 212
+    Left = 24
+    Top = 352
     Width = 121
     Height = 25
-    Caption = 'Send Mail'
+    Caption = #1054#1090#1087#1088#1072#1074#1080#1090#1100' '#1087#1086#1095#1090#1091
     TabOrder = 4
+    OnClick = btnGetDocsClick
   end
   object dtBegin: TDBDateTimeEditEh
     Left = 16
@@ -299,11 +300,10 @@ object Form1: TForm1
     Height = 21
     EditButtons = <>
     Items.Strings = (
-      'Pkg2Rtr.json'
-      'Pkg2Send.json'
-      'J4PostNoIN.json'
-      'J4Post-OAIS.json'
-      'J4Post-OAIS-ATE.json')
+      'package.json'
+      'j4SendMail.json'
+      'j4GetMailList.json'
+      'j4GetMailList-1.json')
     TabOrder = 18
     Text = 'cbSrcPost'
     Visible = True
@@ -347,7 +347,7 @@ object Form1: TForm1
     Top = 352
     Width = 121
     Height = 25
-    Caption = #1055#1086#1083#1091#1095#1080#1090#1100' '#1087#1072#1082#1077#1090#1099
+    Caption = #1055#1086#1083#1091#1095#1080#1090#1100' '#1087#1086#1095#1090#1091
     TabOrder = 22
     OnClick = btnGetTempINClick
   end
@@ -356,7 +356,7 @@ object Form1: TForm1
     Top = 352
     Width = 121
     Height = 25
-    Caption = '***'
+    Caption = #1055#1086#1083#1091#1095#1080#1090#1100' '#1074#1083#1086#1078#1077#1085#1080#1077
     TabOrder = 23
     OnClick = btnServReadyClick
   end
@@ -406,6 +406,15 @@ object Form1: TForm1
     TabOrder = 28
     ValueChecked = 'True'
     ValueUnchecked = 'False'
+  end
+  object btnGetNsiRSMDO: TButton
+    Left = 160
+    Top = 172
+    Width = 119
+    Height = 25
+    Caption = #1047#1072#1075#1088#1091#1079#1080#1090#1100' '#1089#1087#1088#1072#1074#1086#1095#1085#1080#1082
+    TabOrder = 29
+    OnClick = btnGetNsiRSMDOClick
   end
   object DataSource1: TDataSource
     Left = 664

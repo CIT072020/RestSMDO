@@ -1,0 +1,16 @@
+HTTP/1.1 404 Not Found
+Server: nginx/1.17.10
+Date: Wed, 16 Mar 2022 13:38:53 GMT
+Content-Type: application/xml; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+X-Request-ID: a0876e3633dce51291031311c58d2770
+X-Forwarded-Host: gw.nces.by:10491
+X-Forwarded-Proto: https
+X-Forwarded-For: 10.101.1.35
+X-Forwarded-Port: 443
+X-Real-IP: 10.101.1.35
+X-Scheme: https
+Strict-Transport-Security: max-age=15724800; includeSubDomains
+

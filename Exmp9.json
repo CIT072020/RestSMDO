@@ -1,0 +1,961 @@
+{
+    "number": 0,
+    "size": 100,
+    "numberOfElements": 9,
+    "hasNext": false,
+    "content": [
+	{
+            "id": "b640017f-502e-4ce7-99d1-e0ae239a7e78",
+            "confirmId": "4277980e-db08-46af-bcaa-661a1b247fed",
+            "from": {
+                "idAbonent": "ROUTER",
+                "typeAbonent": "ROUTER",
+                "name": "ROUTER",
+                "orgId": null,
+                "applicationId": null,
+                "tags": null
+            },
+            "to": {
+                "idAbonent": "2bb83a51-1b84-46bc-bc3c-d11a43bce0ab",
+                "typeAbonent": "SMDO",
+                "name": "Республиканское унитарное предприятие \"Центр информационных технологий Национального статистического комитета Республики Беларусь\"",
+                "orgId": null,
+                "applicationId": null,
+                "tags": null
+            },
+            "headerId": "ROUTER_ACK_ERROR~0.0.1",
+            "ack": true,
+            "parentId": "2a8f3161-38ed-44cf-84c8-693d9bdfabe6",
+            "attachments": [],
+            "dateIn": "2022-03-04T13:34:31.049Z",
+            "dateSent": "2022-03-04T13:34:30.840Z",
+            "body": {
+                "code": "131",
+                "message": "Пакет 2a8f3161-38ed-44cf-84c8-693d9bdfabe6 не прошел проверку. Ошибки: Путь: /envelop/body/taskList   Текст ошибки: Null value is not allowed.,Путь: /envelop/body/document/author/0/organizationWithSign/officialPersonWithSign   Текст ошибки: Type expected 'array', found 'object'.,Путь: /envelop/body/addDocuments   Текст ошибки: Null value is not allowed.,Путь: /envelop/body/document/author/0/organizationWithSign/officialPersonWithSign/official   Текст ошибки: Type expected 'array', found 'object'.,Путь: /envelop/body   Текст ошибки: Field 'acknowledgement' is required.,Путь: /envelop/body/document/author/0   Текст ошибки: Field 'privatePersonWithSign' is required."
+            },
+            "additionalProperties": null
+        }, 
+		{
+            "id": "9ba9029e-a9c1-41a5-ae47-f1b11aa2ad2c",
+            "confirmId": "dc850b41-ee05-4368-bb0a-6395c90f80e6",
+            "from": {
+                "idAbonent": "ROUTER",
+                "typeAbonent": "ROUTER",
+                "name": "ROUTER",
+                "orgId": null,
+                "applicationId": null,
+                "tags": null
+            },
+            "to": {
+                "idAbonent": "2bb83a51-1b84-46bc-bc3c-d11a43bce0ab",
+                "typeAbonent": "SMDO",
+                "name": "Республиканское унитарное предприятие \"Центр информационных технологий Национального статистического комитета Республики Беларусь\"",
+                "orgId": null,
+                "applicationId": null,
+                "tags": null
+            },
+            "headerId": "ROUTER_ACK_ERROR~0.0.1",
+            "ack": true,
+            "parentId": "98090b1c-1650-4494-9b76-728bbe76867d",
+            "attachments": [],
+            "dateIn": "2022-03-14T13:48:37.221Z",
+            "dateSent": "2022-03-14T13:48:37.055Z",
+            "body": {
+                "code": "131",
+                "message": "Пакет 98090b1c-1650-4494-9b76-728bbe76867d не прошел проверку. Ошибки: Путь: /envelop/body/document/author/0   Текст ошибки: Additional property 'organizationWithSign' is not allowed.,Путь: /envelop/body/document/author/0/organizationWithSign/officialPersonWithSign/0/official   Текст ошибки: Type expected 'array', found 'object'."
+            },
+            "additionalProperties": null
+        }, 
+		{
+            "id": "a737b469-e960-47d6-9d48-b34db1b73537",
+            "confirmId": "0dfb177c-2188-4ac2-9a3c-cf88a6a863be",
+            "from": {
+                "idAbonent": "ROUTER",
+                "typeAbonent": "ROUTER",
+                "name": "ROUTER",
+                "orgId": null,
+                "applicationId": null,
+                "tags": null
+            },
+            "to": {
+                "idAbonent": "2bb83a51-1b84-46bc-bc3c-d11a43bce0ab",
+                "typeAbonent": "SMDO",
+                "name": "Республиканское унитарное предприятие \"Центр информационных технологий Национального статистического комитета Республики Беларусь\"",
+                "orgId": null,
+                "applicationId": null,
+                "tags": null
+            },
+            "headerId": "ROUTER_ROUTER_ACK_ACCEPT~0.0.1",
+            "ack": true,
+            "parentId": "a4d28add-4f70-487e-8eec-9f1992da882c",
+            "attachments": [],
+            "dateIn": "2022-03-15T14:28:42.642Z",
+            "dateSent": "2022-03-15T14:28:42.425Z",
+            "body": {
+                "abonentId": "2bb83a51-1b84-46bc-bc3c-d11a43bce0ab",
+                "ackResult": [{
+                        "value": "Документ доставлен в ядро АИС МВ",
+                        "errorcode": 0
+                    }
+                ],
+                "packageId": "a4d28add-4f70-487e-8eec-9f1992da882c"
+            },
+            "additionalProperties": null
+        }, 
+		{
+            "id": "318ec9da-402e-42d1-ab8b-7ddd30bbf88a",
+            "confirmId": "fbe00e01-3b14-44dc-9af7-f76aa5b7864d",
+            "from": {
+                "idAbonent": "ROUTER",
+                "typeAbonent": "ROUTER",
+                "name": "ROUTER",
+                "orgId": null,
+                "applicationId": null,
+                "tags": null
+            },
+            "to": {
+                "idAbonent": "2bb83a51-1b84-46bc-bc3c-d11a43bce0ab",
+                "typeAbonent": "SMDO",
+                "name": "Республиканское унитарное предприятие \"Центр информационных технологий Национального статистического комитета Республики Беларусь\"",
+                "orgId": null,
+                "applicationId": null,
+                "tags": null
+            },
+            "headerId": "ROUTER_ACK_ERROR~0.0.1",
+            "ack": true,
+            "parentId": "71f21499-0d4f-4ca2-a969-e84b93aaf876",
+            "attachments": [],
+            "dateIn": "2022-03-18T14:32:21.536Z",
+            "dateSent": "2022-03-18T14:32:21.328Z",
+            "body": {
+                "code": "131",
+                "message": "Пакет 71f21499-0d4f-4ca2-a969-e84b93aaf876 не прошел проверку. Ошибки: Путь: /envelop/body/addDocuments/folder/0/referred   Текст ошибки: Type expected 'object', found 'array'."
+            },
+            "additionalProperties": null
+        }, 
+		{
+            "id": "32d1e10c-d099-4da0-87fc-d995de737fa2",
+            "confirmId": "6eba7bfe-44b3-473b-bcd7-8afb0050f197",
+            "from": {
+                "idAbonent": "ROUTER",
+                "typeAbonent": "ROUTER",
+                "name": "ROUTER",
+                "orgId": null,
+                "applicationId": null,
+                "tags": null
+            },
+            "to": {
+                "idAbonent": "2bb83a51-1b84-46bc-bc3c-d11a43bce0ab",
+                "typeAbonent": "SMDO",
+                "name": "Республиканское унитарное предприятие \"Центр информационных технологий Национального статистического комитета Республики Беларусь\"",
+                "orgId": null,
+                "applicationId": null,
+                "tags": null
+            },
+            "headerId": "ROUTER_ACK_ERROR~0.0.1",
+            "ack": true,
+            "parentId": "5a672602-d950-4a89-b054-147b523f6ce3",
+            "attachments": [],
+            "dateIn": "2022-03-21T14:02:26.120Z",
+            "dateSent": "2022-03-21T14:02:25.928Z",
+            "body": {
+                "code": "131",
+                "message": "Пакет 5a672602-d950-4a89-b054-147b523f6ce3 не прошел проверку. Ошибки: Путь: /envelop/body/addDocuments/folder/0/referred/retype   Текст ошибки: Type expected 'string', found 'integer'.,Путь: /envelop/body/addDocuments/folder/0/referred   Текст ошибки: Additional property 'regNumber' is not allowed."
+            },
+            "additionalProperties": null
+        }, 
+		{
+            "id": "411235b7-4347-485f-b294-60d57a9ea3f2",
+            "confirmId": "b1649a0c-4574-4901-9694-bb6dc22ce119",
+            "from": {
+                "idAbonent": "ROUTER",
+                "typeAbonent": "ROUTER",
+                "name": "ROUTER",
+                "orgId": null,
+                "applicationId": null,
+                "tags": null
+            },
+            "to": {
+                "idAbonent": "2bb83a51-1b84-46bc-bc3c-d11a43bce0ab",
+                "typeAbonent": "SMDO",
+                "name": "Республиканское унитарное предприятие \"Центр информационных технологий Национального статистического комитета Республики Беларусь\"",
+                "orgId": null,
+                "applicationId": null,
+                "tags": null
+            },
+            "headerId": "ROUTER_ACK_ERROR~0.0.1",
+            "ack": true,
+            "parentId": "549766ce-ef32-4e17-b322-783291c87c79",
+            "attachments": [],
+            "dateIn": "2022-03-21T14:31:46.217Z",
+            "dateSent": "2022-03-21T14:31:45.898Z",
+            "body": {
+                "code": "131",
+                "message": "Пакет 549766ce-ef32-4e17-b322-783291c87c79 не прошел проверку. Ошибки: Путь: /envelop/body/taskList/task/0/docTransfer/0   Текст ошибки: Additional property 'signature' is not allowed.,Путь: /envelop/body/taskList/task/0/docTransfer/0/signature   Текст ошибки: Type expected 'object', found 'array'."
+            },
+            "additionalProperties": null
+        }, 
+		{
+            "id": "cd0d96e0-ea89-4603-91de-87921302ed66",
+            "confirmId": "07149266-735b-41cf-a17c-cd7f3981e42f",
+            "from": {
+                "idAbonent": "b3cc2eaf-66ee-448d-a314-bbd89e32a5cd",
+                "typeAbonent": "SMDO",
+                "name": "Тестовая организация для тестирования взаимодействия с АИС МВ",
+                "orgId": null,
+                "applicationId": null,
+                "tags": null
+            },
+            "to": {
+                "idAbonent": "2bb83a51-1b84-46bc-bc3c-d11a43bce0ab",
+                "typeAbonent": "SMDO",
+                "name": "Республиканское унитарное предприятие \"Центр информационных технологий Национального статистического комитета Республики Беларусь\"",
+                "orgId": null,
+                "applicationId": null,
+                "tags": null
+            },
+            "headerId": "SMDO~1.0.0",
+            "ack": false,
+            "parentId": null,
+            "attachments": [{
+                    "id": "084be1f5-fbdb-4d0c-91b9-9cd6b1923358",
+                    "size": 19991,
+                    "name": "1647970479366",
+                    "antivirus": null,
+                    "antivirusStmp": null,
+                    "eds": null,
+                    "edsStmp": null,
+                    "sign": [{
+                            "keyId": null,
+                            "signer": "ФИО: Демидовец Оксана Александровна; Должность: Специалист 2-й категории; Организация: Республиканское унитарное предприятие \"Национальный центр электронных услуг\"",
+                            "signtime": "2022-03-22T17:35:42Z",
+                            "operationType": null,
+                            "origSignature": null,
+                            "data": "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"
+                        }
+                    ]
+                }
+            ],
+            "dateIn": "2022-03-22T17:36:19.174Z",
+            "dateSent": "2022-03-22T17:36:17.648Z",
+            "body": {
+                "envelop": {
+                    "body": {
+                        "datadir": null,
+                        "document": {
+                            "kind": "Письмо",
+                            "type": 0,
+                            "pages": 2,
+                            "title": "Тестовое письмо для ЦИТ БЕЛСТАТА",
+                            "author": [{
+                                    "outNumber": null,
+                                    "organizationWithSign": {
+                                        "address": {
+                                            "flat": null,
+                                            "house": null,
+                                            "value": null,
+                                            "region": null,
+                                            "street": null,
+                                            "country": null,
+                                            "postbox": null,
+                                            "building": null,
+                                            "district": null,
+                                            "postcode": null,
+                                            "nontypical": null,
+                                            "settlement": null
+                                        },
+                                        "econtact": [{
+                                                "type": 0,
+                                                "value": ""
+                                            }
+                                        ],
+                                        "fullname": "Тестовая организация для тестирования взаимодействия с АИС МВ",
+                                        "ownership": null,
+                                        "shortname": "Тестовая организация для тестирования взаимодействия с АИС МВ",
+                                        "organization_string": "Тестовая организация для тестирования взаимодействия с АИС МВ, Тестовая организация для тестирования взаимодействия с АИС МВ",
+                                        "officialPersonWithSign": [{
+                                                "name": {
+                                                    "value": "ДЕМИДОВЕЦ О. А.",
+                                                    "secname": "ДЕМИДОВЕЦ",
+                                                    "firstname": "ОКСАНА",
+                                                    "fathersname": "АЛЕКСАНДРОВНА"
+                                                },
+                                                "rank": null,
+                                                "address": null,
+                                                "econtact": null,
+                                                "official": null,
+                                                "signDate": null
+                                            }
+                                        ]
+                                    },
+                                    "privatePersonWithSign": null
+                                }
+                            ],
+                            "writer": {
+                                "organization": {
+                                    "address": {
+                                        "flat": null,
+                                        "house": null,
+                                        "value": null,
+                                        "region": null,
+                                        "street": null,
+                                        "country": null,
+                                        "postbox": null,
+                                        "building": null,
+                                        "district": null,
+                                        "postcode": null,
+                                        "nontypical": null,
+                                        "settlement": null
+                                    },
+                                    "econtact": [{
+                                            "type": 0,
+                                            "value": ""
+                                        }
+                                    ],
+                                    "fullname": "Тестовая организация для тестирования взаимодействия с АИС МВ",
+                                    "ownership": null,
+                                    "shortname": "Тестовая организация для тестирования взаимодействия с АИС МВ",
+                                    "officialPerson": null,
+                                    "organization_string": "Тестовая организация для тестирования взаимодействия с АИС МВ, Тестовая организация для тестирования взаимодействия с АИС МВ"
+                                },
+                                "privatePerson": null
+                            },
+                            "idnumber": "43f5a3d0-aa06-11ec-9b06-4698489cc3f9",
+                            "referred": null,
+                            "confident": {
+                                "flag": 0,
+                                "value": null,
+                                "numcopy": null
+                            },
+                            "docNumber": null,
+                            "docParent": null,
+                            "regNumber": {
+                                "value": "2",
+                                "regdate": "2022-03-22"
+                            },
+                            "validator": [],
+                            "annotation": null,
+                            "collection": null,
+                            "regHistory": null,
+                            "docTransfer": [{
+                                    "os": null,
+                                    "data": {
+                                        "referenceid": "1647970479366"
+                                    },
+                                    "name": "Заключение-о-тестировании (3).docx",
+                                    "type": null,
+                                    "created": null,
+                                    "char_set": null,
+                                    "modified": null,
+                                    "ordernum": null,
+                                    "type_ver": null,
+                                    "signature": [{
+                                            "keyid": null,
+                                            "value": "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",
+                                            "signer": "ФИО: Демидовец Оксана Александровна; Должность: Специалист 2-й категории; Организация: Республиканское унитарное предприятие \"Национальный центр электронных услуг\"",
+                                            "signtime": "2022-03-22T17:35:42Z",
+                                            "operation_type": null,
+                                            "orig_signature": null
+                                        }
+                                    ],
+                                    "description": null
+                                }
+                            ]
+                        },
+                        "taskList": null,
+                        "expansion": null,
+                        "addDocuments": null,
+                        "acknowledgement": null
+                    },
+                    "type": "SDIP-2.1.1",
+                    "header": {
+                        "sender": {
+                            "id": "Org0",
+                            "name": "Тестовая организация для тестирования взаимодействия с АИС МВ",
+                            "sys_id": "93da66ee-1aaf-42da-b11b-f7aeea42e069",
+                            "system": "СЭД АПК \"Платформа\"",
+                            "system_details": "1 СЭД разработанный в рамкам реализации проекта АИСМВ"
+                        },
+                        "msg_type": 1,
+                        "receiver": [{
+                                "id": "Org11952",
+                                "name": "Республиканское унитарное предприятие \"Центр информационных технологий Национального статистического комитета Республики Беларусь\"",
+                                "sys_id": "726df09d-84ab-4370-bb90-87a9d52831fd",
+                                "system": null,
+                                "referred": null,
+                                "organization": {
+                                    "address": {
+                                        "flat": null,
+                                        "house": null,
+                                        "value": null,
+                                        "region": null,
+                                        "street": "МАШЕРОВА",
+                                        "country": null,
+                                        "postbox": null,
+                                        "building": "18",
+                                        "district": null,
+                                        "postcode": "224000",
+                                        "nontypical": null,
+                                        "settlement": null
+                                    },
+                                    "econtact": [{
+                                            "type": 0,
+                                            "value": "202-26-52"
+                                        }
+                                    ],
+                                    "fullname": "Республиканское унитарное предприятие \"Центр информационных технологий Национального статистического комитета Республики Беларусь\"",
+                                    "ownership": null,
+                                    "shortname": "Центр информационных технологий Национального статистического комитета Республики Беларусь",
+                                    "officialPerson": null,
+                                    "organization_string": "Республиканское унитарное предприятие \"Центр информационных технологий Национального статистического комитета Республики Беларусь\", Центр информационных технологий Национального статистического комитета Республики Беларусь"
+                                },
+                                "privatePerson": null,
+                                "system_details": "1.00 Республиканское унитарное предприятие «Центр информационных технологий Национального статического комитета Республики Беларусь"
+                            }
+                        ],
+                        "msg_acknow": 2
+                    },
+                    "msg_id": "944d927b-aa06-11ec-9b06-4698489cc3f9",
+                    "dtstamp": "2022-03-22T17:36:17Z",
+                    "subject": "2 от 2022-03-22"
+                }
+            },
+            "additionalProperties": null
+        }, 
+		{
+            "id": "d85a9d49-b177-4cbf-9365-6032e1259009",
+            "confirmId": "5bf9f513-91f1-498d-b73a-81ac67654586",
+            "from": {
+                "idAbonent": "b3cc2eaf-66ee-448d-a314-bbd89e32a5cd",
+                "typeAbonent": "SMDO",
+                "name": "Тестовая организация для тестирования взаимодействия с АИС МВ",
+                "orgId": null,
+                "applicationId": null,
+                "tags": null
+            },
+            "to": {
+                "idAbonent": "2bb83a51-1b84-46bc-bc3c-d11a43bce0ab",
+                "typeAbonent": "SMDO",
+                "name": "Республиканское унитарное предприятие \"Центр информационных технологий Национального статистического комитета Республики Беларусь\"",
+                "orgId": null,
+                "applicationId": null,
+                "tags": null
+            },
+            "headerId": "SMDO~1.0.0",
+            "ack": false,
+            "parentId": null,
+            "attachments": [
+			{
+                    "id": "06c210f6-ac4e-4faf-bb6d-0652ad866084",
+                    "size": 68488,
+                    "name": "1647970678662",
+                    "antivirus": null,
+                    "antivirusStmp": null,
+                    "eds": null,
+                    "edsStmp": null,
+                    "sign": [{
+                            "keyId": null,
+                            "signer": "ФИО: Демидовец Оксана Александровна; Должность: Специалист 2-й категории; Организация: Республиканское унитарное предприятие \"Национальный центр электронных услуг\"",
+                            "signtime": "2022-03-22T17:39:19Z",
+                            "operationType": null,
+                            "origSignature": null,
+                            "data": "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"
+                        }
+                    ]
+                }, 
+				{
+                    "id": "d28f8ab6-f28a-4303-a638-b45a1f7ceff6",
+                    "size": 134513,
+                    "name": "1647970685605",
+                    "antivirus": null,
+                    "antivirusStmp": null,
+                    "eds": null,
+                    "edsStmp": null,
+                    "sign": [{
+                            "keyId": null,
+                            "signer": "ФИО: Демидовец Оксана Александровна; Должность: Специалист 2-й категории; Организация: Республиканское унитарное предприятие \"Национальный центр электронных услуг\"",
+                            "signtime": "2022-03-22T17:39:31Z",
+                            "operationType": null,
+                            "origSignature": null,
+                            "data": "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"
+                        }
+                    ]
+                }, 
+				{
+                    "id": "25a3b538-9456-4eb1-92b1-893e3b27a8df",
+                    "size": 1434821,
+                    "name": "1647970670990",
+                    "antivirus": null,
+                    "antivirusStmp": null,
+                    "eds": null,
+                    "edsStmp": null,
+                    "sign": [{
+                            "keyId": null,
+                            "signer": "ФИО: Демидовец Оксана Александровна; Должность: Специалист 2-й категории; Организация: Республиканское унитарное предприятие \"Национальный центр электронных услуг\"",
+                            "signtime": "2022-03-22T17:38:58Z",
+                            "operationType": null,
+                            "origSignature": null,
+                            "data": "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"
+                        }
+                    ]
+                }
+            ],
+            "dateIn": "2022-03-22T17:40:25.287Z",
+            "dateSent": "2022-03-22T17:40:23.566Z",
+            "body": {
+                "envelop": {
+                    "body": {
+                        "datadir": null,
+                        "document": {
+                            "kind": "Письмо",
+                            "type": 0,
+                            "pages": 100,
+                            "title": "Тестовое письмо для ЦИТ Белстата с несколькими вложениями",
+                            "author": [{
+                                    "outNumber": null,
+                                    "organizationWithSign": {
+                                        "address": {
+                                            "flat": null,
+                                            "house": null,
+                                            "value": null,
+                                            "region": null,
+                                            "street": null,
+                                            "country": null,
+                                            "postbox": null,
+                                            "building": null,
+                                            "district": null,
+                                            "postcode": null,
+                                            "nontypical": null,
+                                            "settlement": null
+                                        },
+                                        "econtact": [{
+                                                "type": 0,
+                                                "value": ""
+                                            }
+                                        ],
+                                        "fullname": "Тестовая организация для тестирования взаимодействия с АИС МВ",
+                                        "ownership": null,
+                                        "shortname": "Тестовая организация для тестирования взаимодействия с АИС МВ",
+                                        "organization_string": "Тестовая организация для тестирования взаимодействия с АИС МВ, Тестовая организация для тестирования взаимодействия с АИС МВ",
+                                        "officialPersonWithSign": [{
+                                                "name": {
+                                                    "value": "ДЕМИДОВЕЦ О. А.",
+                                                    "secname": "ДЕМИДОВЕЦ",
+                                                    "firstname": "ОКСАНА",
+                                                    "fathersname": "АЛЕКСАНДРОВНА"
+                                                },
+                                                "rank": null,
+                                                "address": null,
+                                                "econtact": null,
+                                                "official": null,
+                                                "signDate": null
+                                            }
+                                        ]
+                                    },
+                                    "privatePersonWithSign": null
+                                }
+                            ],
+                            "writer": {
+                                "organization": {
+                                    "address": {
+                                        "flat": null,
+                                        "house": null,
+                                        "value": null,
+                                        "region": null,
+                                        "street": null,
+                                        "country": null,
+                                        "postbox": null,
+                                        "building": null,
+                                        "district": null,
+                                        "postcode": null,
+                                        "nontypical": null,
+                                        "settlement": null
+                                    },
+                                    "econtact": [{
+                                            "type": 0,
+                                            "value": ""
+                                        }
+                                    ],
+                                    "fullname": "Тестовая организация для тестирования взаимодействия с АИС МВ",
+                                    "ownership": null,
+                                    "shortname": "Тестовая организация для тестирования взаимодействия с АИС МВ",
+                                    "officialPerson": null,
+                                    "organization_string": "Тестовая организация для тестирования взаимодействия с АИС МВ, Тестовая организация для тестирования взаимодействия с АИС МВ"
+                                },
+                                "privatePerson": null
+                            },
+                            "idnumber": "9bd9a3dc-aa06-11ec-9b06-4698489cc3f9",
+                            "referred": null,
+                            "confident": {
+                                "flag": 0,
+                                "value": null,
+                                "numcopy": null
+                            },
+                            "docNumber": null,
+                            "docParent": null,
+                            "regNumber": {
+                                "value": "3",
+                                "regdate": "2022-03-22"
+                            },
+                            "validator": [],
+                            "annotation": null,
+                            "collection": null,
+                            "regHistory": null,
+                            "docTransfer": [{
+                                    "os": null,
+                                    "data": {
+                                        "referenceid": "1647970678662"
+                                    },
+                                    "name": "Приложение А.docx",
+                                    "type": null,
+                                    "created": null,
+                                    "char_set": null,
+                                    "modified": null,
+                                    "ordernum": null,
+                                    "type_ver": null,
+                                    "signature": [{
+                                            "keyid": null,
+                                            "value": "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",
+                                            "signer": "ФИО: Демидовец Оксана Александровна; Должность: Специалист 2-й категории; Организация: Республиканское унитарное предприятие \"Национальный центр электронных услуг\"",
+                                            "signtime": "2022-03-22T17:39:19Z",
+                                            "operation_type": null,
+                                            "orig_signature": null
+                                        }
+                                    ],
+                                    "description": null
+                                }, {
+                                    "os": null,
+                                    "data": {
+                                        "referenceid": "1647970685605"
+                                    },
+                                    "name": "Формат обмена данными СМДО_АИСМВ ОАИС(2022).docx",
+                                    "type": null,
+                                    "created": null,
+                                    "char_set": null,
+                                    "modified": null,
+                                    "ordernum": null,
+                                    "type_ver": null,
+                                    "signature": [{
+                                            "keyid": null,
+                                            "value": "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",
+                                            "signer": "ФИО: Демидовец Оксана Александровна; Должность: Специалист 2-й категории; Организация: Республиканское унитарное предприятие \"Национальный центр электронных услуг\"",
+                                            "signtime": "2022-03-22T17:39:31Z",
+                                            "operation_type": null,
+                                            "orig_signature": null
+                                        }
+                                    ],
+                                    "description": null
+                                }, {
+                                    "os": null,
+                                    "data": {
+                                        "referenceid": "1647970670990"
+                                    },
+                                    "name": "Методика_интеграции_с_маршрутизаторомАИС МВ(2022)!!!!!!!!!!!!!!!!!!!!!исправленная.docx",
+                                    "type": null,
+                                    "created": null,
+                                    "char_set": null,
+                                    "modified": null,
+                                    "ordernum": null,
+                                    "type_ver": null,
+                                    "signature": [{
+                                            "keyid": null,
+                                            "value": "MIIIrgYJKoZIhvcNAQcCoIIInzCCCJsCAQExDzANBgkqcAACACJlH1EFADALBgkqhkiG9w0BBwGgggYDMIIF/zCCBbmgAwIBAgIMQOWxjkFi9l8AD/7QMA0GCSpwAAIAImUtDAUAMIIBljGBozCBoAYDVQQKHoGYBCAENQRBBD8EQwQxBDsEOAQ6BDAEPQRBBDoEPgQ1ACAEQwQ9BDgEQgQwBEAEPQQ+BDUAIAQ/BEAENQQ0BD8EQAQ4BE8EQgQ4BDUAIAAiBB0EMARGBDgEPgQ9BDAEOwRMBD0ESwQ5ACAERgQ1BD0EQgRAACAETQQ7BDUEOgRCBEAEPgQ9BD0ESwRFACAEQwRBBDsEQwQzACIxYTBfBgNVBAMeWAQgBDUEQQQ/BEMEMQQ7BDgEOgQwBD0EQQQ6BDgEOQAgBEMENAQ+BEEEQgQ+BDIENQRABE8ETgRJBDgEOQAgBEYENQQ9BEIEQAAgBBMEPgRBBCEEIwQeBBoxCzAJBgNVBAYTAkJZMRcwFQYDVQQIHg4EHAQ4BD0EQQQ6BDAETzEZMBcGA1UEBx4QBDMALgAgBBwEOAQ9BEEEOjErMCkGA1UECR4iBD8EQAAtBEIAIAQcBDAESAQ1BEAEPgQyBDAALAAgADIANTEdMBsGCSqGSIb3DQEJARYOcmNhQHBraS5nb3YuYnkwHhcNMjEwODIwMDc0MTI5WhcNMjMwODE5MjA1OTU5WjCCAgIxJzAlBgNVBAkMHtGD0Lsu0KDQsNC60L7QstGB0LrQsNGPLCDQtC4xNDGBmzCBmAYDVQQDDIGQ0KDQtdGB0L/Rg9Cx0LvQuNC60LDQvdGB0LrQvtC1INGD0L3QuNGC0LDRgNC90L7QtSDQv9GA0LXQtNC/0YDQuNGP0YLQuNC1ICLQndCw0YbQuNC+0L3QsNC70YzQvdGL0Lkg0YbQtdC90YLRgCDRjdC70LXQutGC0YDQvtC90L3Ri9GFINGD0YHQu9GD0LMiMRswGQYDVQQEDBLQlNC10LzQuNC00L7QstC10YYxJzAlBgkqhkiG9w0BCQEWGG9rc2FuYS5kZW1pZG92ZXpAbmNlcy5ieTELMAkGA1UEBhMCQlkxgZswgZgGA1UECgyBkNCg0LXRgdC/0YPQsdC70LjQutCw0L3RgdC60L7QtSDRg9C90LjRgtCw0YDQvdC+0LUg0L/RgNC10LTQv9GA0LjRj9GC0LjQtSAi0J3QsNGG0LjQvtC90LDQu9GM0L3Ri9C5INGG0LXQvdGC0YAg0Y3Qu9C10LrRgtGA0L7QvdC90YvRhSDRg9GB0LvRg9CzIjEwMC4GA1UEKQwn0J7QutGB0LDQvdCwINCQ0LvQtdC60YHQsNC90LTRgNC+0LLQvdCwMRYwFAYDVQQHDA3Qsy7QnNC40L3RgdC6MF0wGAYKKnAAAgAiZS0CAQYKKnAAAgAiZS0DAQNBAGwL0PJpC09IX1yFhHq5vmwRtsuXGg4sY92d8K2fJPO3GofHHf5A0mBd9WrsE4DVuccNAMuSg7veb2KFKCOKwkWjggF0MIIBcDAfBgNVHSMEGDAWgBQ5XoDV5NkcWT2GV3SnnNW9QX07gDAJBgNVHRMEAjAAMAsGA1UdDwQEAwIDuDATBgNVHSUEDDAKBggrBgEFBQcDAjAdBgNVHQ4EFgQUD0l6ecwlYVggtH/3S0BqE1MARd0wMgYIKnABAgEBBQQEJjAkMCKADzIwMjEwODIwMDczOTUwWoEPMjAzNjA4MjAwNzM5NTBaMCEGCSpwAQIBAQEBAgQUHhIAMQA5ADEANwAwADAAMQA2ADEwKwYJKnABAgEBAQEBBB4eHAA0ADEAOAAwADEAOQAzAEEAMAAyADIAUABCADQwPQYJKnABAgEBAQIBBDAeLgAxAC4AMgAuADEAMQAyAC4AMQAuADIALgAxAC4AMQAuADEALgAyAC4AMQAuADQwPgYIKnABAgEBBQEEMh4wBCEEPwQ1BEYEOAQwBDsEOARBBEIAIAAyAC0EOQAgBDoEMARCBDUEMwQ+BEAEOAQ4MA0GCSpwAAIAImUtDAUAAzEArES8mhEh0Gll8+Ku5Hs3eDhv8t/9RuV2rE5CnfSrsfsNINCWdiQ2j1O/RNJTTUeBMYICbzCCAmsCAQEwggGoMIIBljGBozCBoAYDVQQKHoGYBCAENQRBBD8EQwQxBDsEOAQ6BDAEPQRBBDoEPgQ1ACAEQwQ9BDgEQgQwBEAEPQQ+BDUAIAQ/BEAENQQ0BD8EQAQ4BE8EQgQ4BDUAIAAiBB0EMARGBDgEPgQ9BDAEOwRMBD0ESwQ5ACAERgQ1BD0EQgRAACAETQQ7BDUEOgRCBEAEPgQ9BD0ESwRFACAEQwRBBDsEQwQzACIxYTBfBgNVBAMeWAQgBDUEQQQ/BEMEMQQ7BDgEOgQwBD0EQQQ6BDgEOQAgBEMENAQ+BEEEQgQ+BDIENQRABE8ETgRJBDgEOQAgBEYENQQ9BEIEQAAgBBMEPgRBBCEEIwQeBBoxCzAJBgNVBAYTAkJZMRcwFQYDVQQIHg4EHAQ4BD0EQQQ6BDAETzEZMBcGA1UEBx4QBDMALgAgBBwEOAQ9BEEEOjErMCkGA1UECR4iBD8EQAAtBEIAIAQcBDAESAQ1BEAEPgQyBDAALAAgADIANTEdMBsGCSqGSIb3DQEJARYOcmNhQHBraS5nb3YuYnkCDEDlsY5BYvZfAA/+0DANBgkqcAACACJlH1EFAKBpMBgGCSqGSIb3DQEJAzELBgkqhkiG9w0BBwEwHAYJKoZIhvcNAQkFMQ8XDTIyMDMyMjE3Mzg1OFowLwYJKoZIhvcNAQkEMSIEIIBOA5P7vwuzynCotTJyV+Q2nj9ufcj8TkKBzGd9gNfCMA4GCipwAAIAImUtAgEFAAQwST1asMhvLdKnurlSU/r+zyY44PEfSvrXIcjxeqTphj8KNQlzOyH+ZHzfUuM4IsCa",
+                                            "signer": "ФИО: Демидовец Оксана Александровна; Должность: Специалист 2-й категории; Организация: Республиканское унитарное предприятие \"Национальный центр электронных услуг\"",
+                                            "signtime": "2022-03-22T17:38:58Z",
+                                            "operation_type": null,
+                                            "orig_signature": null
+                                        }
+                                    ],
+                                    "description": null
+                                }
+                            ]
+                        },
+                        "taskList": null,
+                        "expansion": null,
+                        "addDocuments": null,
+                        "acknowledgement": null
+                    },
+                    "type": "SDIP-2.1.1",
+                    "header": {
+                        "sender": {
+                            "id": "Org0",
+                            "name": "Тестовая организация для тестирования взаимодействия с АИС МВ",
+                            "sys_id": "93da66ee-1aaf-42da-b11b-f7aeea42e069",
+                            "system": "СЭД АПК \"Платформа\"",
+                            "system_details": "1 СЭД разработанный в рамкам реализации проекта АИСМВ"
+                        },
+                        "msg_type": 1,
+                        "receiver": [{
+                                "id": "Org11952",
+                                "name": "Республиканское унитарное предприятие \"Центр информационных технологий Национального статистического комитета Республики Беларусь\"",
+                                "sys_id": "726df09d-84ab-4370-bb90-87a9d52831fd",
+                                "system": null,
+                                "referred": null,
+                                "organization": {
+                                    "address": {
+                                        "flat": null,
+                                        "house": null,
+                                        "value": null,
+                                        "region": null,
+                                        "street": "МАШЕРОВА",
+                                        "country": null,
+                                        "postbox": null,
+                                        "building": "18",
+                                        "district": null,
+                                        "postcode": "224000",
+                                        "nontypical": null,
+                                        "settlement": null
+                                    },
+                                    "econtact": [{
+                                            "type": 0,
+                                            "value": "202-26-52"
+                                        }
+                                    ],
+                                    "fullname": "Республиканское унитарное предприятие \"Центр информационных технологий Национального статистического комитета Республики Беларусь\"",
+                                    "ownership": null,
+                                    "shortname": "Центр информационных технологий Национального статистического комитета Республики Беларусь",
+                                    "officialPerson": null,
+                                    "organization_string": "Республиканское унитарное предприятие \"Центр информационных технологий Национального статистического комитета Республики Беларусь\", Центр информационных технологий Национального статистического комитета Республики Беларусь"
+                                },
+                                "privatePerson": null,
+                                "system_details": "1.00 Республиканское унитарное предприятие «Центр информационных технологий Национального статического комитета Республики Беларусь"
+                            }
+                        ],
+                        "msg_acknow": 2
+                    },
+                    "msg_id": "26e271b9-aa07-11ec-9b06-4698489cc3f9",
+                    "dtstamp": "2022-03-22T17:40:23Z",
+                    "subject": "3 от 2022-03-22"
+                }
+            },
+            "additionalProperties": null
+        }, 
+		{
+            "id": "92fb63f5-2c36-415a-8dc3-c5e78a93c2d5",
+            "confirmId": "98f0f773-6d79-4031-89e2-859738c18298",
+            "from": {
+                "idAbonent": "b3cc2eaf-66ee-448d-a314-bbd89e32a5cd",
+                "typeAbonent": "SMDO",
+                "name": "Тестовая организация для тестирования взаимодействия с АИС МВ",
+                "orgId": null,
+                "applicationId": null,
+                "tags": null
+            },
+            "to": {
+                "idAbonent": "2bb83a51-1b84-46bc-bc3c-d11a43bce0ab",
+                "typeAbonent": "SMDO",
+                "name": "Республиканское унитарное предприятие \"Центр информационных технологий Национального статистического комитета Республики Беларусь\"",
+                "orgId": null,
+                "applicationId": null,
+                "tags": null
+            },
+            "headerId": "SMDO~1.0.0",
+            "ack": false,
+            "parentId": null,
+            "attachments": [{
+                    "id": "706e379c-49ea-44be-88f0-888fbc1ce757",
+                    "size": 732398102,
+                    "name": "1647976730797",
+                    "antivirus": null,
+                    "antivirusStmp": null,
+                    "eds": null,
+                    "edsStmp": null,
+                    "sign": [{
+                            "keyId": null,
+                            "signer": "ФИО: Демидовец Оксана Александровна; Должность: Специалист 2-й категории; Организация: Республиканское унитарное предприятие \"Национальный центр электронных услуг\"",
+                            "signtime": "2022-03-22T19:20:48Z",
+                            "operationType": null,
+                            "origSignature": null,
+                            "data": "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"
+                        }
+                    ]
+                }
+            ],
+            "dateIn": "2022-03-22T19:21:49.255Z",
+            "dateSent": "2022-03-22T19:21:48.372Z",
+            "body": {
+                "envelop": {
+                    "body": {
+                        "datadir": null,
+                        "document": {
+                            "kind": "Письмо",
+                            "type": 0,
+                            "pages": 5,
+                            "title": "Тестовый документ на ЦИТ Белстата",
+                            "author": [{
+                                    "outNumber": null,
+                                    "organizationWithSign": {
+                                        "address": {
+                                            "flat": null,
+                                            "house": null,
+                                            "value": null,
+                                            "region": null,
+                                            "street": null,
+                                            "country": null,
+                                            "postbox": null,
+                                            "building": null,
+                                            "district": null,
+                                            "postcode": null,
+                                            "nontypical": null,
+                                            "settlement": null
+                                        },
+                                        "econtact": [{
+                                                "type": 0,
+                                                "value": ""
+                                            }
+                                        ],
+                                        "fullname": "Тестовая организация для тестирования взаимодействия с АИС МВ",
+                                        "ownership": null,
+                                        "shortname": "Тестовая организация для тестирования взаимодействия с АИС МВ",
+                                        "organization_string": "Тестовая организация для тестирования взаимодействия с АИС МВ, Тестовая организация для тестирования взаимодействия с АИС МВ",
+                                        "officialPersonWithSign": [{
+                                                "name": {
+                                                    "value": "ДЕМИДОВЕЦ О. А.",
+                                                    "secname": "ДЕМИДОВЕЦ",
+                                                    "firstname": "ОКСАНА",
+                                                    "fathersname": "АЛЕКСАНДРОВНА"
+                                                },
+                                                "rank": null,
+                                                "address": null,
+                                                "econtact": null,
+                                                "official": null,
+                                                "signDate": null
+                                            }
+                                        ]
+                                    },
+                                    "privatePersonWithSign": null
+                                }
+                            ],
+                            "writer": {
+                                "organization": {
+                                    "address": {
+                                        "flat": null,
+                                        "house": null,
+                                        "value": null,
+                                        "region": null,
+                                        "street": null,
+                                        "country": null,
+                                        "postbox": null,
+                                        "building": null,
+                                        "district": null,
+                                        "postcode": null,
+                                        "nontypical": null,
+                                        "settlement": null
+                                    },
+                                    "econtact": [{
+                                            "type": 0,
+                                            "value": ""
+                                        }
+                                    ],
+                                    "fullname": "Тестовая организация для тестирования взаимодействия с АИС МВ",
+                                    "ownership": null,
+                                    "shortname": "Тестовая организация для тестирования взаимодействия с АИС МВ",
+                                    "officialPerson": null,
+                                    "organization_string": "Тестовая организация для тестирования взаимодействия с АИС МВ, Тестовая организация для тестирования взаимодействия с АИС МВ"
+                                },
+                                "privatePerson": null
+                            },
+                            "idnumber": "60eb1724-aa14-11ec-9b06-4698489cc3f9",
+                            "referred": null,
+                            "confident": {
+                                "flag": 0,
+                                "value": null,
+                                "numcopy": null
+                            },
+                            "docNumber": null,
+                            "docParent": null,
+                            "regNumber": {
+                                "value": "4",
+                                "regdate": "2022-03-22"
+                            },
+                            "validator": [],
+                            "annotation": null,
+                            "collection": null,
+                            "regHistory": null,
+                            "docTransfer": [{
+                                    "os": null,
+                                    "data": {
+                                        "referenceid": "1647976730797"
+                                    },
+                                    "name": "Linux 1.rar",
+                                    "type": null,
+                                    "created": null,
+                                    "char_set": null,
+                                    "modified": null,
+                                    "ordernum": null,
+                                    "type_ver": null,
+                                    "signature": [{
+                                            "keyid": null,
+                                            "value": "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",
+                                            "signer": "ФИО: Демидовец Оксана Александровна; Должность: Специалист 2-й категории; Организация: Республиканское унитарное предприятие \"Национальный центр электронных услуг\"",
+                                            "signtime": "2022-03-22T19:20:48Z",
+                                            "operation_type": null,
+                                            "orig_signature": null
+                                        }
+                                    ],
+                                    "description": null
+                                }
+                            ]
+                        },
+                        "taskList": null,
+                        "expansion": null,
+                        "addDocuments": null,
+                        "acknowledgement": null
+                    },
+                    "type": "SDIP-2.1.1",
+                    "header": {
+                        "sender": {
+                            "id": "Org0",
+                            "name": "Тестовая организация для тестирования взаимодействия с АИС МВ",
+                            "sys_id": "93da66ee-1aaf-42da-b11b-f7aeea42e069",
+                            "system": "СЭД АПК \"Платформа\"",
+                            "system_details": "1 СЭД разработанный в рамкам реализации проекта АИСМВ"
+                        },
+                        "msg_type": 1,
+                        "receiver": [{
+                                "id": "Org11952",
+                                "name": "Республиканское унитарное предприятие \"Центр информационных технологий Национального статистического комитета Республики Беларусь\"",
+                                "sys_id": "726df09d-84ab-4370-bb90-87a9d52831fd",
+                                "system": null,
+                                "referred": null,
+                                "organization": {
+                                    "address": {
+                                        "flat": null,
+                                        "house": null,
+                                        "value": null,
+                                        "region": null,
+                                        "street": "МАШЕРОВА",
+                                        "country": null,
+                                        "postbox": null,
+                                        "building": "18",
+                                        "district": null,
+                                        "postcode": "224000",
+                                        "nontypical": null,
+                                        "settlement": null
+                                    },
+                                    "econtact": [{
+                                            "type": 0,
+                                            "value": "202-26-52"
+                                        }
+                                    ],
+                                    "fullname": "Республиканское унитарное предприятие \"Центр информационных технологий Национального статистического комитета Республики Беларусь\"",
+                                    "ownership": null,
+                                    "shortname": "Центр информационных технологий Национального статистического комитета Республики Беларусь",
+                                    "officialPerson": null,
+                                    "organization_string": "Республиканское унитарное предприятие \"Центр информационных технологий Национального статистического комитета Республики Беларусь\", Центр информационных технологий Национального статистического комитета Республики Беларусь"
+                                },
+                                "privatePerson": null,
+                                "system_details": "1.00 Республиканское унитарное предприятие «Центр информационных технологий Национального статического комитета Республики Беларусь"
+                            }
+                        ],
+                        "msg_acknow": 2
+                    },
+                    "msg_id": "51b53dcf-aa15-11ec-9b06-4698489cc3f9",
+                    "dtstamp": "2022-03-22T19:21:48Z",
+                    "subject": "4 от 2022-03-22"
+                }
+            },
+            "additionalProperties": null
+        }
+    ]
+}

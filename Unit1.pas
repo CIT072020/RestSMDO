@@ -14,14 +14,18 @@ uses
   HTTPSend,
   ssl_openssl, ssl_openssl_lib,
   SasaINiFile,
+  TasksEx,
+  //fPIN4Av,
   uUseful,
-  uRSMDO,
-  uROCExchg;
+  uRSMDOService,
+  uRSMDO;
 
-const  
+const
   INI_NAME = '..\Lais7\Service\smdo.ini';
+const
+  JDAT_PATH = 'TestPost\';
 
- 
+
 
 type
   TForm1 = class(TForm)
@@ -69,18 +73,22 @@ type
     edJavaDate: TDBEditEh;
     btnGetINsOnly: TButton;
     cbINsOnly: TDBCheckBoxEh;
+    btnGetNsiRSMDO: TButton;
     procedure btnCursNormClick(Sender: TObject);
     procedure btnCursWaitClick(Sender: TObject);
     procedure btnGetActualClick(Sender: TObject);
+    procedure btnGetDocsClick(Sender: TObject);
     procedure btnGetINsOnlyClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure btnGetNSIClick(Sender: TObject);
+    procedure btnGetNsiRSMDOClick(Sender: TObject);
     procedure btnPostDocClick(Sender: TObject);
     procedure btnGetTempINClick(Sender: TObject);
     procedure btnServReadyClick(Sender: TObject);
   private
     { Private declarations }
+    procedure ShowDeb(const s: string; ClearAll: Boolean = True);
   public
     { Public declarations }
   end;
@@ -95,9 +103,12 @@ var
 
 implementation
 
+
 uses
   kbmMemTable,
   DBFunc,
+  synautil,
+  //superobject,
   uAvest,
   fPIN4Av;
 
@@ -105,11 +116,12 @@ uses
 
 
 // Вывод отладки в Memo
-procedure ShowDeb(const s: string; const ClearAll: Boolean = True);
+procedure TForm1.ShowDeb(const s: string; ClearAll: Boolean = True);
 var
   AddS: string;
 begin
   AddS := '';
+  ClearAll := cbClearLog.Checked;
   if (ClearAll = True) then
     ShowM.Text := ''
   else
@@ -132,14 +144,14 @@ begin
   edCount.Text  := '100';
   cbSrcPost.ItemIndex := 0;
 
-  IniFile  := TSasaIniFile.Create(INI_NAME);
-  RSMDO := TRouterMV.Create(IniFile, Form1);
-  Self.Caption := 'Обмен с адресом: ' + RSMDO.FHost.URL;
+  //IniFile  := TSasaIniFile.Create(INI_NAME);
+  RSMDO := TRouterMV.Create(INI_NAME);
+  Self.Caption := 'Обмен с адресом: ' + RSMDO.FHost.URLNsi;
 end;
 
 procedure TForm1.FormDestroy(Sender: TObject);
 begin
-  FreeAndNil(IniFile);
+  //FreeAndNil(IniFile);
   FreeAndNil(RSMDO);
 end;
 
@@ -221,21 +233,7 @@ end;
 
 
 
-// Получить пакеты
-procedure TForm1.btnGetTempINClick(Sender: TObject);
-var
-  i : Integer;
-  s : string;
-begin
-  i := RSMDO.GetMailList(nil);
-end;
 
-procedure TForm1.btnServReadyClick(Sender: TObject);
-var
-  Ret : Boolean;
-  s : string;
-begin
-end;
 
 procedure TForm1.btnCursWaitClick(Sender: TObject);
 begin
@@ -250,15 +248,201 @@ begin
   TButton(Sender).Caption := DateTimeToStr(JavaToDelphiDateTime(StrToInt64(edJavaDate.Text)));;
 end;
 
+// SendMail
+procedure TForm1.btnGetDocsClick(Sender: TObject);
+const
+  at1 = '1234';
+  at2 = '12345';
+  ATT_NAME = 'attach';
+var
+  Ret : Boolean;
+  i,
+  iSrc  : Integer;
+  t1, te : Cardinal;
+  sErr,
+  sAttName,
+  sAttPath,
+  sJFName : string;
+  SOPkg : ISuperObject;
+  AttFile : TAttach;
+  Atts  : TStringList;
+begin
+  iSrc    := cbSrcPost.ItemIndex;
+  sJFName := cbSrcPost.Items[iSrc];
+  sAttPath := FullPathSubDir(JDAT_PATH);
+  SOPkg   := TSuperObject.ParseFile(sAttPath + sJFName, False);
+  Atts    := TStringList.Create;
+
+  i := 1;
+  sAttName := ATT_NAME + IntToStr(i);
+  while (FileExists(sAttPath + sAttName)) do begin
+    AttFile := TAttach.Create(sAttName);
+    AttFile.FileName := sAttName;
+    AttFile.Path := sAttPath;
+    Atts.AddObject(sAttName, AttFile);
+    i := i + 1;
+    sAttName := ATT_NAME + IntToStr(i);
+  end;
+
+  EnterWorkerThread;
+  try
+    t1  := GetTick;
+    Ret := RSMDO.SendMail(SOPkg, sAttPath, False, Atts, sErr);
+    te  := TickDelta(t1, GetTick);
+    if (Ret) then
+      sErr := 'OK - Выполнено';
+  finally
+    LeaveWorkerThread;
+    FreeNilWObj(Atts);
+  end;
+  sErr := Format('MSec - %d', [te]) + CRLF + sErr;
+  ShowDeb(sErr);
+end;
+
+
+
+
+
+// Получить пакеты
+procedure TForm1.btnGetTempINClick(Sender: TObject);
+var
+  bRet : Boolean;
+  i : Integer;
+  s : string;
+  SAllCont : ISuperObject;
+begin
+  bRet := RSMDO.GetNewMailList(SAllCont, s);
+  if (bRet) then
+    s := Format('Загружено пакетов - %d', [SAllCont.AsArray.Length]);
+  ShowDeb(s);
+end;
+
+
+// Загрузить Attach
+procedure TForm1.btnServReadyClick(Sender: TObject);
+var
+  Ret : Boolean;
+  i, GoodAtt : Integer;
+  PkgId,
+  AttId,
+  s : string;
+  Atts : TStringList;
+  AttFile : TAttach;
+begin
+  Atts  := TStringList.Create;
+//* - 1 - 1 attach
+
+(*
+  PkgId := 'cd0d96e0-ea89-4603-91de-87921302ed66';
+  AttId := '084be1f5-fbdb-4d0c-91b9-9cd6b1923358';
+  AttFile := TAttach.Create(AttId);
+  AttFile.GUIDPackage := PkgId;
+  AttFile.GUIDFile    := AttId;
+  AttFile.FileName    := '1647970479366';
+  AttFile.Path        := FullPathSubDir(JDAT_PATH);
+  Atts.AddObject(AttId, AttFile);
+*)
+
+(*
+//* - 2 - 3 attachs
+  PkgId := 'd85a9d49-b177-4cbf-9365-6032e1259009';
+  AttId := '06c210f6-ac4e-4faf-bb6d-0652ad866084';
+  AttFile := TAttach.Create(AttId);
+  AttFile.GUIDPackage := PkgId;
+  AttFile.GUIDFile    := AttId;
+  AttFile.FileName    := '1647970678662';
+  AttFile.Path        := FullPathSubDir(JDAT_PATH);
+  Atts.AddObject(AttId, AttFile);
+
+  AttId := 'd28f8ab6-f28a-4303-a638-b45a1f7ceff6';
+  AttFile := TAttach.Create(AttId);
+  AttFile.GUIDPackage := PkgId;
+  AttFile.GUIDFile    := AttId;
+  AttFile.FileName    := '1647970685605';
+  AttFile.Path        := FullPathSubDir(JDAT_PATH);
+  Atts.AddObject(AttId, AttFile);
+
+  AttId := '25a3b538-9456-4eb1-92b1-893e3b27a8df';
+  AttFile := TAttach.Create(AttId);
+  AttFile.GUIDPackage := PkgId;
+  AttFile.GUIDFile    := AttId;
+  AttFile.FileName    := '1647970670990';
+  AttFile.Path        := FullPathSubDir(JDAT_PATH);
+  Atts.AddObject(AttId, AttFile);
+*)
+
+
+// - 3- 1 attach big size
+  PkgId := '92fb63f5-2c36-415a-8dc3-c5e78a93c2d5';
+  AttId := '706e379c-49ea-44be-88f0-888fbc1ce757';
+  AttFile := TAttach.Create(AttId);
+  AttFile.GUIDPackage := PkgId;
+  AttFile.GUIDFile    := AttId;
+  AttFile.FileName    := '1647976730797';
+  AttFile.Path        := FullPathSubDir(JDAT_PATH);
+  Atts.AddObject(AttId, AttFile);
+
+  Ret := RSMDO.GetMailAttachs(Atts);
+  GoodAtt := 0;
+  s := '';
+  for i := 0 to Atts.Count - 1 do begin
+    AttFile := TAttach(Atts.Objects[i]);
+    if (AttFile.Ok) then
+      GoodAtt := GoodAtt + 1
+    else begin
+      //s := s + AttFile.Error + CRLF;
+    end;
+    s := s + AttFile.Error + CRLF;
+  end;
+
+  if (Ret) then begin
+    s := s + Format('Успешно принято - %d, ошибочных - %d',[GoodAtt, Atts.Count - GoodAtt])
+  end else
+    s := 'Были ошибки:' + s;
+  ShowDeb(s);
+
+end;
+
+
+
+
 procedure TForm1.btnGetINsOnlyClick(Sender: TObject);
 var
   Ret : Boolean;
   i : Integer;
   sE  : string;
+  RQRes : TResultHTTP;
 begin
-  Ret := RSMDO.GetApiAuthToken;
-  i := RSMDO.SetRetCode(Ret, RSMDO.ResHTTP, sE);
-  ShowDeb(IntToStr(i) + ' ' + sE);
+  RQRes := nil;
+  Ret := RSMDO.GetApiAuthToken(RQRes);
+  if (Ret = True) then
+    sE := Format('Auth: %s', [RSMDO.FSecure.GetApiAuth])
+  else begin
+    sE := Format('Код ошибки %d %s', [RQRes.ResCode, RQRes.ResMsg]);
+    FreeAndNil(RQRes);
+  end;
+  ShowDeb(sE);
+end;
+
+procedure TForm1.btnGetNsiRSMDOClick(Sender: TObject);
+var
+  Ret : Boolean;
+  i : Integer;
+  s,
+  sE  : string;
+  SONsi,
+  Filter : ISuperObject;
+  RQRes : TResultHTTP;
+begin
+  Filter := nil;
+  Ret := RSMDO.GetNsi(REQ_NSI_TYPDOC, True, Filter, SONsi, sE);
+  if (Ret) then begin
+    s := Format('Загружено записей - %d', [SONsi.AsArray.Length]);
+  end else begin
+    s := 'Ошибки при загрузке НСИ ';
+  end;
+  s := s + sE;
+  ShowDeb(s);
 end;
 
 end.

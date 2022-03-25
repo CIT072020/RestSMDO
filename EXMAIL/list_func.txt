@@ -1,0 +1,112 @@
+  URL для тестового скачивания:  'https://vc.brest.by/download/SetupLAIS.exe'
+
+//****************** Получение писем	   
+
+------------------------------------------------------------------------------------
+function GetPackages(sPathFiles:String; slPackage:TStringList; slLog:TStringList; var sError:String):Boolean;
+  вход
+    sPathFiles='D:\DDD'  куда складывать JSON-пакеты
+    slPackage пустой список
+    slLog     пустой список
+  выход
+    slPackage[0]='data_json1.json'
+     ...
+    slPackage[n]='data_jsonn.json'
+    slLog[0]='строка лога 1'
+     ...
+    slLog[m]='строка лога m'
+    sError='строка с возникшей ошибкой'
+------------------------------------------------------------------------------------
+function GetFilesPackage(sPackage:String; sPathFiles:String; slFilesGUID:TStringList; slFilesName:TStringList; slLog:TStringList; var sError:String):Boolean;
+   вход
+       sPackage='3cab9e26-87c6-4ba8-8aae-05a0349a88eb'
+       sPathFiles='D:\DDDD'
+       slFilesGUID[0]:='11291c94-f7d1-4683-9769-dd7da06840bc'   slFilesGUID[0].Tag=0
+        ...
+       slFilesGUID[n]:='7aff2b5b-b422-455d-9bf1-02fe8ebc645c'   slFilesGUID[0].Tag=0
+       slFilesNAME[0]:=''
+        ...
+       slFilesNAME[n]:=''  
+
+   выход
+       slFilesGUID[0]:='11291c94-f7d1-4683-9769-dd7da06840bc'   slFilesGUID[0].Tag=1
+        ...
+       slFilesGUID[n]:='7aff2b5b-b422-455d-9bf1-02fe8ebc645c'   slFilesGUID[0].Tag=1 (если не загружен остается 0)
+       slFilesNAME[0]:='attach1'
+        ...
+       slFilesNAME[n]:='attachN'
+       slLog[0]='строка лога 1'
+        ...
+       slLog[m]='строка лога m'
+       sError='строка с возникшей ошибкой'
+
+------------------------------------------------------------------------------------
+function ConfirmPackages(slPackages:TStringList; slLog:TStringList; var sError:String):Boolean;
+подтверждение получения packages
+   slPackages=список confirmId
+   slPackages[0]='3cab9e26-87c6-4ba8-8aae-05a0349a88eb'	   
+    ...
+
+
+//****************** Отправка писем	   
+
+
+------------------------------------------------------------------------------------
+function SendPackage(var sPackage:String; sPathFiles:String; oPackage:TSuperObject; slFiles:TStringList; slLog:TStringList; var sError:String):Boolean;
+   вход
+     sPackage='' или '3cab9e26-87c6-4ba8-8aae-05a0349a88eb'  если пустая строка, то полная отправка нового письма, необходимо заполнить sPackage
+                                                             если GUID, то slFiles содержит файлы которые необходимо доотправить
+     sPathFiles='D:\DDDD'
+     oPackage= SuperObject c пакетом
+     slFiles[0]:='attach1'
+      ...
+     slFiles[n]:='attachN'
+   выход
+     slFiles[0]:='attach1=11291c94-f7d1-4683-9769-dd7da06840bc'  ,если файл успешно отправлен
+      ...
+     slFiles[n]:='attachN'                                       ,если файл не отправлен
+	 
+------------------------------------------------------------------------------------
+function DeletePackage(sPackage:String; slLog:TStringList; var sError:String):Boolean;
+
+~~~~~~~~~~~~~~~~~~~~~~~
+
+// sPathFiles - (\-ended) путь к списку файлов письма (JSON-представление и вложения)  
+// slFiles: AttachName = T
+------------------------------------------------------------------------------------
+function SendMail(oPackage:TSuperObject; sPathFiles:String; slFiles:TStringList) : Boolean;
+   вход
+     sPackage='' или '3cab9e26-87c6-4ba8-8aae-05a0349a88eb'  если пустая строка, то полная отправка нового письма, необходимо заполнить sPackage
+                                                             если GUID, то slFiles содержит файлы которые необходимо доотправить
+     sPathFiles='D:\DDDD'
+     oPackage= SuperObject c пакетом
+     slFiles[0]:='attach1'
+      ...
+     slFiles[n]:='attachN'
+   выход
+     slFiles[0]:='attach1=11291c94-f7d1-4683-9769-dd7da06840bc'  ,если файл успешно отправлен
+      ...
+     slFiles[n]:='attachN'                                       ,если файл не отправлен
+	 
+------------------------------------------------------------------------------------
+function SendAttach(sPackage:String; sPathFiles:String; slFiles:TStringList; slLog:TStringList; var sError:String):Boolean;
+   вход
+     sPackage='' или '3cab9e26-87c6-4ba8-8aae-05a0349a88eb'  если пустая строка, то полная отправка нового письма, необходимо заполнить sPackage
+                                                             если GUID, то slFiles содержит файлы которые необходимо доотправить
+     sPathFiles='D:\DDDD'
+     oPackage= SuperObject c пакетом
+     slFiles[0]:='attach1'
+      ...
+     slFiles[n]:='attachN'
+   выход
+     slFiles[0]:='attach1=11291c94-f7d1-4683-9769-dd7da06840bc'  ,если файл успешно отправлен
+      ...
+     slFiles[n]:='attachN'                                       ,если файл не отправлен
+	 
+	 
+
+   в случае отправки уведомления slFiles будет пустой
+
+
+
+
